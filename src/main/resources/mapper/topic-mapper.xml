@@ -93,9 +93,9 @@
     from topic
     WHERE topic_id in 
     (
-    	SELECT topic_id FROM comment WHERE user_id = #{userId}
+    	SELECT topic_id FROM comment WHERE user_id = #{userId} and status = 1
     )
-     AND user_id != #{userId}
+     AND user_id != #{userId} and and status = 1
     ORDER BY create_time DESC
     LIMIT #{offset},#{limit}
   </select>

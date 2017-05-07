@@ -32,7 +32,7 @@ public class TopicServiceImpl implements TopicService {
 		
 		topic.setTopicId(IdUtils.id());
 		topic.setCreateTime(DateUtils.getNowDateTime());
-		topic.setStatus(1);
+		topic.setStatus(0);
 		topic.setCommentNum(0);
 		
 		return topicMapper.insert(topic);
